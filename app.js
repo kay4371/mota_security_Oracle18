@@ -7599,8 +7599,11 @@ app.post('/login', async (req, res) => {
     await client.close();
   }
 });
-const user = await usersCollection.findOne({ _id: new ObjectId(userId) });
 
+
+
+// const user = await usersCollection.findOne({ _id: new ObjectId(userId) });
+// Fetch user name endpoint
 // Fetch user name endpoint
 app.post('/registered_user_name', async (req, res) => {
   const userId = req.session.userId;
